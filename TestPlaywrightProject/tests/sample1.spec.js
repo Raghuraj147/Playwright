@@ -11,4 +11,7 @@ test("Launch W3School Application", async ({page}) => {
     //Capture URL
     const url = await page.url()
     console.log("URL of Application :"+url)
+
+    await expect (page).toHaveTitle("W3School Online Web Tutorial")
+    await expect(page).toHaveURL("https://www.w3schools.com/")
 })
